@@ -23,17 +23,21 @@ const Home = () => {
         <img
           src={metal}
           alt="PRS logo metal"
-          className="h-[500px] aspect-square absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 lg:h-[720px]"
+          className="h-[360px] aspect-square absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 md:h-[720px]"
         />
       </div>
       <div data-depth="0.3" className="relative h-full w-full ">
-        <div className="absolute top-40 flex justify-center items-center w-full">
-          <h1 className="font-squada text-cwhite text-5xl">
+        <div className="absolute top-20 md:top-36 flex justify-center items-center w-full">
+          <h1 className="font-squada text-cwhite">
             <span className="bg-cpink px-4 text-3xl border-4">HII, IT'S</span>
             <br />
-            <span className="bg-cpink px-4 border-4">PRADIPTA R. SANDRI</span>
-            <br />
-            <span className="bg-ccyan px-4 text-lg font-blinker py-2 border-4">
+            <span className="bg-cpink px-4 text-4xl lg:text-6xl border-4">
+              PRADIPTA R. SANDRI
+            </span>
+            <div>
+              <br></br>
+            </div>
+            <span className="bg-ccyan px-4 text-lg lg:text-xl font-blinker py-2 border-4">
               I am a{" "}
               <Typewriter
                 words={[
@@ -52,7 +56,7 @@ const Home = () => {
         <img
           src={hero}
           alt="HERO"
-          className="absolute -bottom-20 left-1/2 -translate-x-1/2 aspect-auto h-[640px] lg:h-[720px]"
+          className="absolute -bottom-28 md:-bottom-20 left-1/2 -translate-x-1/2 aspect-auto h-[640px] lg:h-[720px]"
         />
       </div>
     </section>
