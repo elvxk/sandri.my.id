@@ -1,3 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Squada+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Blinker&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg_parallax {
+  background-image: url("./assets/parallax/bg_parallax.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.doodle {
+  background-image: url("./assets/parallax/doodle.webp");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: 1280px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
