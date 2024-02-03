@@ -4,6 +4,7 @@ import {
   IoCodeWorkingOutline,
   IoMailOutline,
 } from "react-icons/io5";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 const Navbar = () => {
   return (
@@ -38,6 +39,8 @@ const Navbar = () => {
             <IoMailOutline className="text-xl" />
             <span className="text-xs">CONTACT</span>
           </a>
+
+          <ThemeSwitcher />
         </div>
       </div>
     </nav>

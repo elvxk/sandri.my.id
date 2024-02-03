@@ -2,7 +2,7 @@ import Parallax from "parallax-js";
 import { useEffect, useRef } from "react";
 import hero from "../assets/parallax/hero.webp";
 import metal from "../assets/parallax/metal.webp";
-import doodle from "../assets/parallax/doodle.webp";
+import { Typewriter } from "react-simple-typewriter";
 
 const Home = () => {
   const sceneEl = useRef(null);
@@ -23,19 +23,36 @@ const Home = () => {
         <img
           src={metal}
           alt="PRS logo metal"
-          className="h-[400px] aspect-square absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 lg:h-[720px]"
+          className="h-[500px] aspect-square absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 lg:h-[720px]"
         />
       </div>
-      <div data-depth="0.25" className="relative h-full w-full ">
-        <h1 className="font-squada text-cpink absolute  top-10 text-4xl w-full text-center">
-          PRADIPTA R. SANDRI
-        </h1>
+      <div data-depth="0.3" className="relative h-full w-full ">
+        <div className="absolute top-40 flex justify-center items-center w-full">
+          <h1 className="font-squada text-cwhite text-5xl">
+            <span className="bg-cpink px-4 text-3xl border-4">HII, IT'S</span>
+            <br />
+            <span className="bg-cpink px-4 border-4">PRADIPTA R. SANDRI</span>
+            <br />
+            <span className="bg-ccyan px-4 text-lg font-blinker py-2 border-4">
+              I am a{" "}
+              <Typewriter
+                words={[
+                  "Web Developer",
+                  "Forntend Developer",
+                  "Music Producer",
+                ]}
+                loop={true}
+                cursor
+              />
+            </span>
+          </h1>
+        </div>
       </div>
       <div data-depth="0.5" className="relative h-full w-full ">
         <img
           src={hero}
           alt="HERO"
-          className="absolute -bottom-20 left-1/2 -translate-x-1/2 aspect-auto h-[540px] lg:h-[720px]"
+          className="absolute -bottom-20 left-1/2 -translate-x-1/2 aspect-auto h-[640px] lg:h-[720px]"
         />
       </div>
     </section>
