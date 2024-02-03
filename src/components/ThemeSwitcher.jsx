@@ -35,7 +35,7 @@ const ThemeSwitcher = () => {
     <button
       aria-label="Sun x Moon"
       onClick={toggleTheme}
-      className="text-cdark dark:text-cwhite hover:rotate-20 hover:bg-ccyan p-2 rounded-full"
+      className="text-cdark dark:text-cwhite hover:rotate-20 hover:bg-cpink p-2 rounded-full"
     >
       {theme === "light" ? <BsMoonStarsFill /> : <BsSunFill />}
     </button>
