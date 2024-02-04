@@ -1,9 +1,3 @@
-import {
-  IoHomeOutline,
-  IoNewspaperOutline,
-  IoCodeWorkingOutline,
-  IoMailOutline,
-} from "react-icons/io5";
 import ThemeSwitcher from "./ThemeSwitcher";
 import Logo from "./Logo";
 import { useState } from "react";
@@ -13,6 +7,7 @@ const Navbar = () => {
   return (
     <>
       <nav
+        data-aos="fade-down"
         className={`fixed right-0 left-0 z-30 transition-all dark:bg-cdark rounded-b-2xl container mx-auto bg-cbrown shadow-md`}
       >
         <div className="flex justify-between items-center text-cdark px-4 py-2">
