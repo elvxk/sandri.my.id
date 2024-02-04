@@ -1,12 +1,12 @@
-const About = () => {
+const Contact = () => {
   return (
     <section
-      id="about"
+      id="contact"
       className="min-h-screen flex justify-center items-center text-3xl font-bold"
     >
-      <h1>ABOUT</h1>
+      <h1>CONTACT</h1>
     </section>
   );
 };
 
-export default About;
+export default Contact;

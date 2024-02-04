@@ -1,9 +1,29 @@
 import ThemeSwitcher from "./ThemeSwitcher";
 import Logo from "./Logo";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
   const [menuOpened, setMenuOpened] = useState(false);
+
+  const [nav, setNav] = useState("home");
+
+  useEffect(() => {
+    const sections = document.querySelectorAll("section");
+    window.onscroll = () => {
+      var current = "home";
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        if (scrollY >= sectionTop - 60) {
+          current = section.getAttribute("id");
+          setNav(current);
+        }
+      });
+      nav === current
+        ? document.getElementById("nav" + nav).classList.add("active")
+        : document.getElementById("nav" + nav).classList.remove("active");
+    };
+  });
   return (
     <>
       <nav
@@ -18,32 +38,36 @@ const Navbar = () => {
                 PRADIPTA R. SANDRI
               </h1>
             </a>
-            <div className="hidden lg:flex text-lg justify-center items-center gap-4 font-blinker text-cdark dark:text-cwhite">
+            <div className=" hidden lg:flex text-lg justify-center items-center gap-4 font-blinker text-cdark dark:text-cwhite">
               <a
+                id="navhome"
                 href="#home"
                 onClick={() => setMenuOpened(!menuOpened)}
-                className="cursor-pointer hover:scale-110 transition-all px-2 hover:text-cwhite hover:bg-cpink"
+                className="cursor-pointer hover:scale-110 transition-all px-2 hover:text-cwhite hover:bg-cpink [&.active]:text-cpink [&.active]:hover:text-cwhite [&.active]:font-bold active"
               >
                 Home
               </a>
               <a
+                id="navabout"
                 href="#about"
                 onClick={() => setMenuOpened(!menuOpened)}
-                className="cursor-pointer hover:scale-110 transition-all px-2 hover:text-cwhite hover:bg-cpink"
+                className="cursor-pointer hover:scale-110 transition-all px-2 hover:text-cwhite hover:bg-cpink [&.active]:text-cpink [&.active]:hover:text-cwhite [&.active]:font-bold"
               >
                 About
               </a>
               <a
+                id="navworks"
                 href="#works"
                 onClick={() => setMenuOpened(!menuOpened)}
-                className="cursor-pointer hover:scale-110 transition-all px-2 hover:text-cwhite hover:bg-cpink"
+                className="cursor-pointer hover:scale-110 transition-all px-2 hover:text-cwhite hover:bg-cpink [&.active]:text-cpink [&.active]:hover:text-cwhite [&.active]:font-bold"
               >
                 Works
               </a>
               <a
+                id="navcontact"
                 href="#contact"
                 onClick={() => setMenuOpened(!menuOpened)}
-                className="cursor-pointer hover:scale-110 transition-all px-2 hover:text-cwhite hover:bg-cpink"
+                className="cursor-pointer hover:scale-110 transition-all px-2 hover:text-cwhite hover:bg-cpink [&.active]:text-cpink [&.active]:hover:text-cwhite [&.active]:font-bold"
               >
                 Contact
               </a>
@@ -119,9 +143,9 @@ const Navbar = () => {
         </a>
 
         <a
-          href="#contact"
-          onClick={() => setMenuOpened(!menuOpened)}
-          className="mt-20 text-cpink font-blinker text-sm font-bold cursor-pointer transition-all hover:scale-95"
+          href="https://sandri.my.id"
+          target="_blank"
+          className="mt-20 text-cwhite bg-cpink px-2 font-blinker text-sm border-2 cursor-pointer transition-all hover:scale-95"
         >
           www.sandri.my.id
         </a>

@@ -9,8 +9,9 @@ export default {
 
       cwhite: "#FFFFFF",
 
-      ccyan: "#2E706C",
-      cdcyan: "#64BFB3",
+      ccyan: "#64BFB3",
+      // ccyan: "#2E706C",
+      // cdcyan: "#64BFB3",
 
       cpink: "#CC669C",
     },

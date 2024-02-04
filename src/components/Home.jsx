@@ -13,10 +13,10 @@ const Home = () => {
   }, []);
   return (
     <section id="home" ref={sceneEl} className="h-screen overflow-hidden">
-      <div data-depth="0.1" className="relative h-full w-full">
+      <div data-depth="-0.1" className="relative h-full w-full">
         <div className="bg_parallax absolute w-[150%] h-[110%] -top-20 -left-20" />
       </div>
-      <div data-depth="-0.1" className="relative h-full w-full">
+      <div data-depth="0.1" className="relative h-full w-full">
         <div
           data-aos="zoom-out"
           className="doodle absolute w-[120%] h-[120%] -top-20 -left-20"

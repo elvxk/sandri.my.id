@@ -2,6 +2,7 @@
   "name": "sandri.my.id",
   "private": true,
   "version": "1.0.0",
+  "homepage": "https://sandri.my.id/",
   "type": "module",
   "scripts": {
     "dev": "vite",
