@@ -1,11 +1,31 @@
 import ThemeSwitcher from "./ThemeSwitcher";
 import Logo from "./Logo";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
+import { FaGithub, FaLinkedinIn, FaInstagram } from "react-icons/fa6";
 
 const Navbar = () => {
   const [menuOpened, setMenuOpened] = useState(false);
 
   const [nav, setNav] = useState("home");
+  const [isHide, setIsHide] = useState(false);
+  const [y, setY] = useState(document.scrollingElement.scrollHeight);
+  const handleNavigation = useCallback(
+    (e) => {
+      if (y > window.scrollY) {
+        setIsHide(false);
+      } else if (y < window.scrollY) {
+        setIsHide(true);
+      }
+      setY(window.scrollY);
+    },
+    [y]
+  );
+  useEffect(() => {
+    window.addEventListener("scroll", handleNavigation);
+    return () => {
+      window.removeEventListener("scroll", handleNavigation);
+    };
+  }, [handleNavigation]);
 
   useEffect(() => {
     const sections = document.querySelectorAll("section");
@@ -27,60 +47,27 @@ const Navbar = () => {
   return (
     <>
       <nav
-        data-aos="fade-down"
-        className={`fixed right-0 left-0 z-30 transition-all dark:bg-cdark rounded-b-2xl container mx-auto bg-cbrown shadow-md`}
+        // className={`fixed right-0 left-0 z-30 transition-all rounded-b-2xl container mx-auto bg-cbrown dark:bg-cdark shadow-md`}
+        className={`fixed right-0 left-0 z-30 ${
+          isHide ? "-top-80" : "top-0"
+        } transition-all`}
       >
-        <div className="flex justify-between items-center text-cdark px-4 py-2">
-          <div className="flex justify-center items-center gap-10">
-            <a href="#home" className="flex items-center justify-center">
-              <Logo className="fill-cdark dark:fill-cwhite hover:-rotate-12 hover:scale-105 transition-all " />
-              <h1 className="font-squada text-cdark dark:text-cwhite text-xl hover:scale-105 transition-all">
-                PRADIPTA R. SANDRI
-              </h1>
-            </a>
-            <div className=" hidden lg:flex text-lg justify-center items-center gap-4 font-blinker text-cdark dark:text-cwhite">
-              <a
-                id="navhome"
-                href="#home"
-                onClick={() => setMenuOpened(!menuOpened)}
-                className="cursor-pointer hover:scale-110 transition-all px-2 hover:text-cwhite hover:bg-cpink [&.active]:text-cpink [&.active]:hover:text-cwhite [&.active]:font-bold active"
-              >
-                Home
-              </a>
-              <a
-                id="navabout"
-                href="#about"
-                onClick={() => setMenuOpened(!menuOpened)}
-                className="cursor-pointer hover:scale-110 transition-all px-2 hover:text-cwhite hover:bg-cpink [&.active]:text-cpink [&.active]:hover:text-cwhite [&.active]:font-bold"
-              >
-                About
-              </a>
-              <a
-                id="navworks"
-                href="#works"
-                onClick={() => setMenuOpened(!menuOpened)}
-                className="cursor-pointer hover:scale-110 transition-all px-2 hover:text-cwhite hover:bg-cpink [&.active]:text-cpink [&.active]:hover:text-cwhite [&.active]:font-bold"
-              >
-                Works
-              </a>
-              <a
-                id="navcontact"
-                href="#contact"
-                onClick={() => setMenuOpened(!menuOpened)}
-                className="cursor-pointer hover:scale-110 transition-all px-2 hover:text-cwhite hover:bg-cpink [&.active]:text-cpink [&.active]:hover:text-cwhite [&.active]:font-bold"
-              >
-                Contact
-              </a>
-            </div>
-          </div>
+        <div
+          className="flex justify-between items-center text-cdark px-4 py-2 transition-all rounded-b-2xl container mx-auto bg-cwhite/50 dark:bg-cdark/50 "
+          data-aos="fade-down"
+          data-aos-delay="400"
+        >
+          <a href="#home" className="flex items-center justify-center">
+            <Logo className="fill-cdark dark:fill-cwhite hover:-rotate-12 hover:scale-105 transition-all " />
+          </a>
           <div className="flex items-center justify-between">
-            <div className="hover:-rotate-12 hover:scale-105 transition-all">
-              <ThemeSwitcher />
+            <div className="hover:-rotate-12 hover:scale-105 transition-all justify-center items-center flex">
+              <ThemeSwitcher className="text-cdark dark:text-cwhite" />
             </div>
             <div className="flex justify-center items-center scale-75 lg:hidden">
               <button
                 onClick={() => setMenuOpened(!menuOpened)}
-                className=" w-11 h-11 p-3 rounded-full hover:scale-105 hover:rotate-12 transition-all hover:bg-cpink"
+                className=" w-11 h-11 p-3 rounded-full hover:scale-105 transition-all"
               >
                 <div
                   className={`bg-cdark dark:bg-cwhite h-1 w-full transition-all rounded-full ${
@@ -103,49 +90,71 @@ const Navbar = () => {
         </div>
       </nav>
       <div
-        className={`doodlenav font-squada text-cdark dark:text-cwhite text-4xl gap-2 lg:hidden fixed flex flex-col h-screen w-full bg-cbrown dark:bg-cdark z-10 justify-center items-center transition-all
+        className={`doodlenav font-blinker font-bold text-cdark dark:text-cwhite text-xl gap-2 lg:hidden fixed flex flex-col h-screen w-full bg-cbrown dark:bg-cdark z-10 justify-center items-center transition-all
         ${menuOpened ? "right-0" : "-right-[100%]"}`}
       >
         <a
           href="#home"
           onClick={() => setMenuOpened(!menuOpened)}
-          className="scale-[200%] cursor-pointer hover:scale-[220%] hover:rotate-12  transition-all fill-cpink "
+          className="scale-[180%] cursor-pointer hover:scale-[190%] hover:rotate-12  transition-all fill-cpink dark:fill-ccyan"
         >
           <Logo />
         </a>
         <a
           href="#home"
           onClick={() => setMenuOpened(!menuOpened)}
-          className="mt-20 cursor-pointer hover:scale-110 transition-all hover:text-cpink"
+          className="mt-20 cursor-pointer hover:scale-110 transition-all hover:text-cpink dark:hover:text-ccyan"
         >
-          HOME
+          Home
         </a>
         <a
           href="#about"
           onClick={() => setMenuOpened(!menuOpened)}
-          className="cursor-pointer hover:scale-110 transition-all hover:text-cpink"
+          className="cursor-pointer hover:scale-110 transition-all hover:text-cpink dark:hover:text-ccyan"
         >
-          ABOUT
+          About
         </a>
         <a
-          href="#works"
+          href="#projects"
           onClick={() => setMenuOpened(!menuOpened)}
-          className="cursor-pointer hover:scale-110 transition-all hover:text-cpink"
+          className="cursor-pointer hover:scale-110 transition-all hover:text-cpink dark:hover:text-ccyan"
         >
-          WORKS
+          Projects
         </a>
         <a
           href="#contact"
           onClick={() => setMenuOpened(!menuOpened)}
-          className="cursor-pointer hover:scale-110 transition-all hover:text-cpink"
+          className="cursor-pointer hover:scale-110 transition-all hover:text-cpink dark:hover:text-ccyan"
         >
-          CONTACT
+          Contact
         </a>
-
+        <div className="flex justify-between gap-4 mt-20 items-center text-xl text-cdark dark:text-cwhite">
+          <a
+            href="https://instagram.com/elvxk"
+            target="_blank"
+            className="hover:text-cpink transition-all dark:hover:text-ccyan"
+          >
+            <FaInstagram />
+          </a>
+          <a
+            href="https://github.com/elvxk"
+            target="_blank"
+            className="hover:text-cpink transition-all dark:hover:text-ccyan"
+          >
+            <FaGithub />
+          </a>
+          <a
+            href="https://linkedin.com/in/elvxk"
+            target="_blank"
+            className="hover:text-cpink transition-all dark:hover:text-ccyan"
+          >
+            <FaLinkedinIn />
+          </a>
+        </div>
         <a
           href="https://sandri.my.id"
           target="_blank"
-          className="mt-20 text-cwhite bg-cpink px-2 font-blinker text-sm border-2 cursor-pointer transition-all hover:scale-95"
+          className=" text-cwhite bg-cpink dark:bg-ccyan px-2 font-blinker text-sm cursor-pointer transition-all hover:scale-95"
         >
           www.sandri.my.id
         </a>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { BsSunFill, BsMoonStarsFill } from "react-icons/bs";
 
-const ThemeSwitcher = () => {
+const ThemeSwitcher = (props) => {
   const [theme, setTheme] = useState(() => {
     const initialTheme = localStorage.getItem("theme");
     return initialTheme ? initialTheme : "light";
@@ -35,7 +35,8 @@ const ThemeSwitcher = () => {
     <button
       aria-label="Sun x Moon"
       onClick={toggleTheme}
-      className="text-cdark dark:text-cwhite hover:rotate-20 hover:bg-cpink p-2 rounded-full"
+      className={props.className}
+      // className="text-cdark dark:text-cwhite hover:rotate-20 hover:bg-cpink p-2 rounded-full"
     >
       {theme === "light" ? <BsMoonStarsFill /> : <BsSunFill />}
     </button>
