@@ -6,7 +6,7 @@ import { FaGithub, FaLinkedinIn, FaInstagram } from "react-icons/fa6";
 const Navbar = () => {
   const [menuOpened, setMenuOpened] = useState(false);
 
-  const [nav, setNav] = useState("home");
+  // const [nav, setNav] = useState("home");
   const [isHide, setIsHide] = useState(false);
   const [y, setY] = useState(document.scrollingElement.scrollHeight);
   const handleNavigation = useCallback(
@@ -27,23 +27,23 @@ const Navbar = () => {
     };
   }, [handleNavigation]);
 
-  useEffect(() => {
-    const sections = document.querySelectorAll("section");
-    window.onscroll = () => {
-      var current = "home";
+  // useEffect(() => {
+  //   const sections = document.querySelectorAll("section");
+  //   window.onscroll = () => {
+  //     var current = "home";
 
-      sections.forEach((section) => {
-        const sectionTop = section.offsetTop;
-        if (scrollY >= sectionTop - 60) {
-          current = section.getAttribute("id");
-          setNav(current);
-        }
-      });
-      nav === current
-        ? document.getElementById("nav" + nav).classList.add("active")
-        : document.getElementById("nav" + nav).classList.remove("active");
-    };
-  });
+  //     sections.forEach((section) => {
+  //       const sectionTop = section.offsetTop;
+  //       if (scrollY >= sectionTop - 60) {
+  //         current = section.getAttribute("id");
+  //         setNav(current);
+  //       }
+  //     });
+  //     nav === current
+  //       ? document.getElementById("nav" + nav).classList.add("active")
+  //       : document.getElementById("nav" + nav).classList.remove("active");
+  //   };
+  // });
   return (
     <>
       <nav

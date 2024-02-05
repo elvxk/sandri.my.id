@@ -18,9 +18,13 @@ const SideNav = () => {
           setNav(current);
         }
       });
-      nav === current
-        ? document.getElementById("nav" + nav).classList.add("active")
-        : document.getElementById("nav" + nav).classList.remove("active");
+      if (nav === current) {
+        document.getElementById("d" + nav).classList.add("active");
+        document.getElementById("nav" + nav).classList.add("active");
+      } else {
+        document.getElementById("d" + nav).classList.remove("active");
+        document.getElementById("nav" + nav).classList.remove("active");
+      }
     };
   });
   return (
@@ -40,55 +44,52 @@ const SideNav = () => {
             <a
               id="navhome"
               href="#home"
-              className="rotate-180 group overflow-hidden relative transition-all py-4 hover:text-cwhite [&.active]:text-cwhite [&.active]:hover:translate-x-2 active"
+              className="rotate-180 group overflow-hidden relative transition-all py-4 hover:text-cwhite [&.active]:text-cwhite [&.active]:hover:text-cwhite dark:[&.active]:text-cwhite dark:[&.active]:hover:text-cwhite active"
             >
               Home
               <span
-                className={`absolute group-hover:h-full w-full bg-cpink dark:bg-ccyan start-0 -z-10 transition-all ${
-                  nav === "home" ? "h-full" : " h-0"
-                }`}
+                id="dhome"
+                className={`active [&.active]:translate-y-1/2 absolute group-hover:translate-y-1/2 bg-cpink dark:bg-ccyan -z-10 transition-all w-full right-1/2 translate-x-1/2 h-full duration-300 -translate-y-[200%] bottom-1/2`}
               />
             </a>
             <a
               id="navabout"
               href="#about"
-              className="rotate-180 group overflow-hidden relative transition-all py-4 hover:text-cwhite [&.active]:text-cwhite [&.active]:hover:translate-x-2"
+              className="rotate-180 group overflow-hidden relative transition-all py-4 hover:text-cwhite [&.active]:text-cwhite [&.active]:hover:text-cwhite dark:[&.active]:text-cwhite dark:[&.active]:hover:text-cwhite"
             >
               About
               <span
-                className={`absolute group-hover:h-full w-full bg-cpink dark:bg-ccyan start-0 -z-10 transition-all ${
-                  nav === "about" ? "h-full" : " h-0"
-                }`}
+                id="dabout"
+                className={` [&.active]:translate-y-1/2 absolute group-hover:translate-y-1/2 bg-cpink dark:bg-ccyan -z-10 transition-all w-full right-1/2 translate-x-1/2 h-full duration-300 -translate-y-[200%] bottom-1/2`}
               />
             </a>
             <a
               id="navprojects"
               href="#projects"
-              className="rotate-180 group overflow-hidden relative transition-all py-4 hover:text-cwhite [&.active]:text-cwhite [&.active]:hover:translate-x-2"
+              className="rotate-180 group overflow-hidden relative transition-all py-4 hover:text-cwhite [&.active]:text-cwhite [&.active]:hover:text-cwhite dark:[&.active]:text-cwhite dark:[&.active]:hover:text-cwhite"
             >
               Projects
               <span
-                className={`absolute group-hover:h-full w-full bg-cpink dark:bg-ccyan start-0 -z-10 transition-all ${
-                  nav === "projects" ? "h-full" : " h-0"
-                }`}
+                id="dprojects"
+                className={` [&.active]:translate-y-1/2 absolute group-hover:translate-y-1/2 bg-cpink dark:bg-ccyan -z-10 transition-all w-full right-1/2 translate-x-1/2 h-full duration-300 -translate-y-[200%] bottom-1/2`}
               />
             </a>
             <a
               id="navcontact"
               href="#contact"
-              className="rotate-180 group overflow-hidden relative transition-all py-4 hover:text-cwhite [&.active]:text-cwhite [&.active]:hover:translate-x-2"
+              className="rotate-180 group overflow-hidden relative transition-all py-4 hover:text-cwhite [&.active]:text-cwhite [&.active]:hover:text-cwhite dark:[&.active]:text-cwhite dark:[&.active]:hover:text-cwhite"
             >
               Contact
               <span
-                className={`absolute group-hover:h-full w-full bg-cpink dark:bg-ccyan start-0 -z-10 transition-all ${
-                  nav === "contact" ? "h-full" : " h-0"
-                }`}
+                id="dcontact"
+                className={` [&.active]:translate-y-1/2 absolute group-hover:translate-y-1/2 bg-cpink dark:bg-ccyan -z-10 transition-all w-full right-1/2 translate-x-1/2 h-full duration-300 -translate-y-[200%] bottom-1/2`}
               />
             </a>
           </div>
         </div>
         <div
           data-aos="fade-right"
+          data-aos-delay="400"
           className="flex flex-col justify-between gap-6 items-center text-xl text-cdark dark:text-cwhite"
         >
           <a
