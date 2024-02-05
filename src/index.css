@@ -29,3 +29,12 @@
 ::-webkit-scrollbar {
   display: none;
 }
+
+::-moz-selection {
+  /* Code for Firefox */
+  background: #64bfb3;
+}
+
+::selection {
+  background: #64bfb3;
+}
