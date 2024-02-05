@@ -48,7 +48,7 @@ const Navbar = () => {
     <>
       <nav
         // className={`fixed right-0 left-0 z-30 transition-all rounded-b-2xl container mx-auto bg-cbrown dark:bg-cdark shadow-md`}
-        className={`fixed right-0 left-0 z-30 ${
+        className={`fixed right-0 left-0 z-30 lg:hidden ${
           isHide ? "-top-80" : "top-0"
         } transition-all`}
       >
