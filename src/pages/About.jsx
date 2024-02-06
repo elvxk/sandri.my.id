@@ -7,6 +7,9 @@ import stack from "../assets/stack/stack";
 import cv from "../assets/cv.pdf";
 import { IoDocumentTextOutline } from "react-icons/io5";
 import { FaLinkedin } from "react-icons/fa";
+import { FaLaptopCode } from "react-icons/fa6";
+import { LuLayoutDashboard } from "react-icons/lu";
+import { MdOutlineLibraryMusic } from "react-icons/md";
 
 const About = () => {
   const [play, setPlay] = useState(false);
@@ -17,6 +20,7 @@ const About = () => {
     <section id="about" className="min-h-screen">
       <div className="container mx-auto">
         <div className="px-6 lg:px-[20vh] py-20 flex flex-col gap-4 overflow-hidden">
+          {/* HII THERE ... */}
           <h1
             data-aos="fade-left"
             data-aos-id="super"
@@ -62,6 +66,8 @@ const About = () => {
             <span className="bg-cpink h-full w-full start-0 absolute transition-all -z-20"></span>
             <span className="bg-ccyan h-full w-0 group-hover:w-full start-0 absolute transition-all -z-10"></span>
           </a>
+          {/* END HII THERE ... */}
+          {/* MY SKILL... */}
           <div className="flex flex-col lg:flex-row justify-between items-center gap-14 lg:gap-4 mt-20 right-0 w-full">
             <div className="w-full flex flex-col items-center lg:items-end max-w-screen-sm">
               <h1
@@ -120,6 +126,9 @@ const About = () => {
                 </a>
               </div>
             </div>
+            {/* END MY SKILL... */}
+
+            {/* PROFILE PHOTO ITS ME ... */}
             <div className="flex flex-col justify-center items-center gap-2 lg:order-first mx-6 cursor-default">
               <div className="relative items-center justify-center flex h-full max-w-[300px] group gap-2 flex-col">
                 <div className="absolute -right-5 -top-6 lg:-left-3 text-5xl font-korean text-cpink/25 dark:text-ccyan/20 group-hover:-translate-y-2 transition-all">
@@ -143,12 +152,38 @@ const About = () => {
                 <div className="lg:group-hover:translate-x-10 group-hover:-translate-x-10 transition-all">
                   <h1
                     data-aos="fade-up"
-                    className="font-blinker font-bold text-xl lg:text-2xl lg:text-center text-ccyan"
+                    className="font-blinker text-xl lg:text-2xl lg:text-center text-cdark dark:text-cwhite"
                   >
                     Its me
                   </h1>
                 </div>
               </div>
+            </div>
+            {/* END OF ITS ME ... */}
+          </div>
+          <div className="flex flex-col justify-center items-center mt-10">
+            <h1
+              data-aos="fade-up"
+              className="font-blinker text-2xl text-ccyan font-bold lg:text-4xl"
+            >
+              Services
+            </h1>
+            <div className="flex flex-wrap justify-center lg:justify-between lg:px-10 w-full items-center my-6 gap-10 cursor-default">
+              <Services
+                icon={<FaLaptopCode />}
+                title="Web Development"
+                desc="Making websites according to requests from zero to finished"
+              />
+              <Services
+                icon={<LuLayoutDashboard />}
+                title="UI Design"
+                desc="Creating user interfaces for a website or mobile application"
+              />
+              <Services
+                icon={<MdOutlineLibraryMusic />}
+                title="Music Producing"
+                desc="Creating songs from recording to mixing and mastering"
+              />
             </div>
           </div>
         </div>
@@ -157,4 +192,25 @@ const About = () => {
   );
 };
 
+const Services = (props) => {
+  const { icon, title, desc } = props;
+  return (
+    <div
+      data-aos="zoom-in"
+      className="relative z-0 w-[250px] lg:w-[300px] h-[350px] flex flex-col p-5 group"
+    >
+      <span className="h-1/3" />
+      <span className="text-5xl relative text-cdark dark:text-cwhite">
+        <span className="absolute z-10">{icon}</span>
+        <span className="h-10 w-10 bg-cpink dark:bg-ccyan absolute -top-3 left-5" />
+      </span>
+      <span className="font-blinker font-bold text-cdark dark:text-cwhite text-lg mt-14">
+        {title}
+      </span>
+      <p className="font-blinker text-cdark dark:text-cwhite">{desc}</p>
+      <div className="-z-10 w-[250px] lg:w-[300px] h-[350px] border-4 border-cdark dark:border-cwhite bg-cbrown dark:bg-cdark absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2" />
+      <div className="-z-20 w-[250px] lg:w-[300px] h-[350px] border-4 border-cpink dark:border-ccyan absolute bottom-1/2 right-1/2 group-hover:right-[42%] group-hover:bottom-[45%] transition-all translate-y-1/2 translate-x-1/2" />
+    </div>
+  );
+};
 export default About;
