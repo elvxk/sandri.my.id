@@ -19,6 +19,7 @@ export default {
       fontFamily: {
         squada: ["Squada One"],
         blinker: ["Blinker"],
+        korean: ["Noto Sans KR"],
       },
     },
   },
