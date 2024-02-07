@@ -168,7 +168,7 @@ const About = () => {
             >
               Services
             </h1>
-            <div className="flex flex-wrap justify-center lg:justify-between lg:px-10 w-full items-center my-6 gap-10 cursor-default">
+            <div className="flex flex-wrap justify-center w-full items-center my-6 gap-16 cursor-default">
               <Services
                 icon={<FaLaptopCode />}
                 title="Web Development"

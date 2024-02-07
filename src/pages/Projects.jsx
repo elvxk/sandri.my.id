@@ -1,12 +1,102 @@
+import { IoOpenOutline } from "react-icons/io5";
+import content from "../components/project";
 const Projects = () => {
   return (
     <section
       id="projects"
-      className="min-h-screen flex justify-center items-center text-3xl font-bold bg-cwhite/5"
+      className="relative min-h-screen w-full overflow-hidden"
     >
-      <h1>PROJECTS</h1>
+      <div className="opacity-[20%]">
+        <div data-aos="fade-down">
+          <div className="absolute font-korean text-8xl right-24  px-6 lg:px-[20vh] py-20 scale-150 top-10 text-cpink dark:text-ccyan opacity-50">
+            프<br />로<br />젝<br />트
+          </div>
+        </div>
+        <div data-aos="fade-up">
+          <div className="absolute font-korean text-8xl right-20  px-6 lg:px-[20vh] py-20 text-cdark dark:text-cwhite">
+            프<br />로<br />젝<br />트
+          </div>
+        </div>
+        <div className="absolute font-korean text-8xl left-20  px-6 lg:px-[20vh] py-20 scale-150 bottom-10 text-cpink dark:text-ccyan opacity-50">
+          웹<br />사<br />이<br />트
+        </div>
+        <div className="absolute font-korean text-8xl left-32 bottom-0  px-6 lg:px-[20vh] py-20 text-cdark dark:text-cwhite">
+          웹<br />사<br />이<br />트
+        </div>
+      </div>
+      <div className="bg_parallax bg-fixed h-full w-full absolute opacity-[40%] dark:opacity-[7%]"></div>
+      <div className="container mx-auto  px-6 lg:px-[20vh] py-20 flex flex-col items-center overflow-hidden">
+        <h1
+          data-aos="fade-up"
+          className="z-10 mb-5 text-4xl font-bold font-blinker text-ccyan"
+        >
+          Projects
+        </h1>
+        <div className="columns-1 md:columns-2  xl:columns-3 overflow-hidden">
+          {content.map((data, i) => {
+            return (
+              <div key={i} className="py-2" data-aos="zoom-in">
+                <Cards
+                  title={data.title}
+                  desc={data.desc}
+                  img={data.img}
+                  stack={data.stack}
+                  demo={data.demo}
+                  text={data.demotext}
+                />
+              </div>
+            );
+          })}
+        </div>
+      </div>
     </section>
   );
 };
 
+const Cards = ({ title, desc, img, stack, demo, text }) => {
+  return (
+    <div className="relative hover:scale-95 transition-all w-full border-4 border-cdark dark:border-cwhite flex flex-col shadow-lg overflow-hidden">
+      <div className="bg-cbrown dark:bg-cdark w-full h-full absolute -z-20"></div>
+      <div className="w-full h-full overflow-hidden self-center group mb-4 border-8 border-cbrown dark:border-cdark">
+        <img
+          className="object-cover object-center h-full w-full transition-all group-hover:scale-[105%] duration-500"
+          src={img}
+        />
+      </div>
+      <div className="px-4 pb-4 gap-2 flex flex-col">
+        <div className="flex gap-2 items-center ">
+          {stack.map((s, i) => {
+            const name = s.props;
+            return (
+              <span
+                key={i}
+                className="text-xs border-2 px-1 flex items-center gap-1 text-cpink dark:text-ccyan"
+              >
+                {s}
+                {s.props && name.name}
+              </span>
+            );
+          })}
+        </div>
+        <div className="flex flex-col my-2">
+          <h1 className="font-blinker text-2xl font-bold text-cdark dark:text-cwhite items-center">
+            {title}
+          </h1>
+          <p className="font-blinker text-justify text-cdark dark:text-cwhite">
+            {desc}
+          </p>
+        </div>
+        <a
+          target="_blank"
+          href={demo}
+          className="group cursor-pointer relative overflow-hidden text-cwhite px-2 py-1 text-center flex justify-center items-center gap-2"
+        >
+          {text} <IoOpenOutline />
+          <span className="absolute h-full bg-ccyan dark:bg-cpink w-full -translate-x-[100%] group-hover:translate-x-0 transition-all -z-10" />
+          <span className="absolute h-full bg-cpink dark:bg-ccyan w-full -z-20" />
+        </a>
+      </div>
+    </div>
+  );
+};
 export default Projects;
