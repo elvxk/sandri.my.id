@@ -6,6 +6,7 @@ import {
   SiLaravel,
   SiMysql,
   SiReact,
+  SiSpotify,
   SiTailwindcss,
 } from "react-icons/si";
 import dinotro from "../assets/project/dinotrostore.webp";
@@ -14,15 +15,20 @@ import portfoliov2 from "../assets/project/portfoliov2.webp";
 import portfoliov1 from "../assets/project/portfoliov1.webp";
 import portfoliov3 from "../assets/project/portfoliov3.webp";
 import pesenstudiomlg from "../assets/project/pesenstudiomlg.webp";
+import boardtify from "../assets/project/boardtify.webp";
 
 const project = [
   {
-    title: "Dinotro Store",
-    desc: "Landing page and company profile page for Dinotrostore. Dinotro Store is a marketplace providing the #1 best game top-up service in Indonesia, with the lowest prices and super instant process. Get more promos and discounts by joining as a Premium member/customer.",
-    stack: [<SiReact name="React" />, <SiTailwindcss name="Tailwind" />],
-    img: dinotro,
+    title: "Boardtify",
+    desc: "Boardtify is an application using the spotify API to get top tracks",
+    stack: [
+      <SiReact name="React" />,
+      <SiTailwindcss name="Tailwind" />,
+      <SiSpotify name="Spotify API" />,
+    ],
+    img: boardtify,
     demotext: "Demo",
-    demo: "https://dinotrostore.vercel.app/",
+    demo: "https://boardtify.vercel.app/",
   },
   {
     title: "Pesen Studio MLG",
@@ -37,6 +43,15 @@ const project = [
     demo: "https://sandri.vercel.app/",
   },
   {
+    title: "Dinotro Store",
+    desc: "Landing page and company profile page for Dinotrostore. Dinotro Store is a marketplace providing the #1 best game top-up service in Indonesia, with the lowest prices and super instant process. Get more promos and discounts by joining as a Premium member/customer.",
+    stack: [<SiReact name="React" />, <SiTailwindcss name="Tailwind" />],
+    img: dinotro,
+    demotext: "Demo",
+    demo: "https://dinotrostore.vercel.app/",
+  },
+
+  {
     title: "Current Portfolio",
     desc: "This is my portfolio website that I created using React and Tailwind. The one you are now visiting",
     stack: [<SiReact name="React" />, <SiTailwindcss name="Tailwind" />],
@@ -44,14 +59,7 @@ const project = [
     demotext: "Current Web",
     demo: "https://sandri.vercel.app/",
   },
-  {
-    title: "Portfolio Purple Theme",
-    desc: "This is my first portfolio website that I created using only HTML and the help of Tailwind to make it easier to create an interface",
-    stack: [<SiHtml5 name="Html" />, <SiTailwindcss name="Tailwind" />],
-    img: portfoliov1,
-    demotext: "Demo",
-    demo: "https://elvxk-portfoliov1.vercel.app/",
-  },
+
   {
     title: "Portfolio RDR Theme",
     desc: "This is my portfolio website that I created using Laravel and React plus Tailwind with the RDR theme",
