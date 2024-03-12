@@ -12,12 +12,12 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
-      
+
       - name: Install Dependencies and Build
         run: |
           npm install
           npm run build
-      
+
       - name: Deploy to cPanel
         uses: appleboy/ssh-action@master
         with:
@@ -26,6 +26,6 @@ jobs:
           password: ${{ secrets.CPANEL_PASSWORD }}
           port: ${{ secrets.CPANEL_PORT }}
           script: |
-            cd /home/username/sandri.my.id
+            cd /home/aldinowi/sandri.my.id
             rm -rf *
             unzip -o ../../master.zip
