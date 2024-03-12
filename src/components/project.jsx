@@ -1,21 +1,20 @@
 import {
   SiBootstrap,
-  SiCodeigniter,
   SiHtml5,
   SiJquery,
   SiLaravel,
-  SiMysql,
   SiReact,
   SiSpotify,
   SiTailwindcss,
+  SiNextdotjs,
+  SiPostgresql,
 } from "react-icons/si";
 import dinotro from "../assets/project/dinotrostore.webp";
 import stxrp from "../assets/project/stxrp.webp";
 import portfoliov2 from "../assets/project/portfoliov2.webp";
-import portfoliov1 from "../assets/project/portfoliov1.webp";
 import portfoliov3 from "../assets/project/portfoliov3.webp";
-import pesenstudiomlg from "../assets/project/pesenstudiomlg.webp";
 import boardtify from "../assets/project/boardtify.webp";
+import muminime from "../assets/project/muminime.webp";
 
 const project = [
   {
@@ -31,16 +30,17 @@ const project = [
     demo: "https://boardtify.vercel.app/",
   },
   {
-    title: "Pesen Studio MLG",
-    desc: "A website for booking music studios in Malang City by implementing geolocation and payment gateway.",
+    title: "Muminime",
+    desc: "a website to view some anime and manga information taken from the public API. Can add to the collection list on your profile",
     stack: [
-      <SiCodeigniter name="CodeIgniter" />,
-      <SiBootstrap name="Bootstrap" />,
-      <SiMysql name="Mysql" />,
+      <SiNextdotjs name="NextJs" />,
+      <SiPostgresql name="Postgresql" />,
+      <SiReact name="React" />,
+      <SiTailwindcss name="Tailwind" />,
     ],
-    img: pesenstudiomlg,
+    img: muminime,
     demotext: "Demo",
-    demo: "https://sandri.vercel.app/",
+    demo: "https://my-muminime.vercel.app/",
   },
   {
     title: "Dinotro Store",

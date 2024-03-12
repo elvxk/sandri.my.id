@@ -48,6 +48,15 @@ const Projects = () => {
             );
           })}
         </div>
+        <a
+          href="https://github.com/elvxk"
+          target="_blank"
+          rel="noreferrer"
+          data-aos="fade-up"
+          className="z-10 mt-10 text-xl font-bold font-blinker text-ccyan"
+        >
+          See more projects on GitHub {">"}
+        </a>
       </div>
     </section>
   );
@@ -90,6 +99,7 @@ const Cards = ({ title, desc, img, stack, demo, text }) => {
           target="_blank"
           href={demo}
           className="group cursor-pointer relative overflow-hidden text-cwhite px-2 py-1 text-center flex justify-center items-center gap-2"
+          rel="noreferrer"
         >
           {text} <IoOpenOutline />
           <span className="absolute h-full bg-ccyan dark:bg-cpink w-full -translate-x-[100%] group-hover:translate-x-0 transition-all -z-10" />
