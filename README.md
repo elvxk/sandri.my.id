@@ -10,7 +10,7 @@
     ><br />「 Pradipta R. Sandri Profile using <b>React</b> and <b>TailwindCSS</b> 」
     <br />
     <br />
-    🤘yeah
+    🤘
   </samp>
 </p>
 <p align="center">
