@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Parallax from "parallax-js";
 import { useEffect, useRef } from "react";
 import hero from "../assets/parallax/hero.webp";
@@ -46,7 +47,7 @@ const Home = () => {
           className="absolute top-20 md:top-20 flex justify-center items-center w-full"
         >
           <h1 className="font-squada text-cwhite">
-            <span className="bg-cpink px-4 text-3xl border-4">HII, IT`S</span>
+            <span className="bg-cpink px-4 text-3xl border-4">HII, IT'S</span>
             <br />
             <span className="bg-cpink px-4 text-4xl lg:text-6xl border-4">
               {/* PRADIPTA R. SANDRI */}
