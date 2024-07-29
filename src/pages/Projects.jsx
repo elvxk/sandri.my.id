@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { IoOpenOutline } from "react-icons/io5";
 import content from "../components/project";
 const Projects = () => {
