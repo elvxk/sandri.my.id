@@ -29,7 +29,7 @@ const Projects = () => {
       <div className="container mx-auto  px-6 lg:px-[20vh] py-20 flex flex-col items-center overflow-hidden">
         <h1
           data-aos="fade-up"
-          className="z-10 mb-5 text-4xl font-bold font-blinker text-ccyan"
+          className="z-[7] mb-5 text-4xl font-bold font-blinker text-ccyan"
         >
           Web Dev Projects
         </h1>
@@ -54,18 +54,18 @@ const Projects = () => {
           target="_blank"
           rel="noreferrer"
           data-aos="fade-up"
-          className="z-10 mt-10 text-md font-bold font-blinker text-ccyan"
+          className="z-[7] mt-10 text-md font-bold font-blinker text-ccyan"
         >
           See more projects on GitHub {">"}
         </a>
         <h1
           data-aos="fade-up"
-          className="z-10 mb-5 mt-20 text-4xl font-bold font-blinker text-ccyan"
+          className="z-[7] mb-5 mt-20 text-4xl font-bold font-blinker text-ccyan"
         >
           Music Prod Projects
         </h1>
         <iframe
-          className="z-10"
+          className="z-[7]"
           width="95%"
           height="400"
           scrolling="no"
@@ -79,7 +79,7 @@ const Projects = () => {
           target="_blank"
           rel="noreferrer"
           data-aos="fade-up"
-          className="z-10 mt-10 text-md font-bold font-blinker text-ccyan"
+          className="z-[7] mt-10 text-md font-bold font-blinker text-ccyan"
         >
           See more projects on Soundcloud {">"}
         </a>
