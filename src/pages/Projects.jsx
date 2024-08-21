@@ -31,7 +31,7 @@ const Projects = () => {
           data-aos="fade-up"
           className="z-10 mb-5 text-4xl font-bold font-blinker text-ccyan"
         >
-          Projects
+          Web Dev Projects
         </h1>
         <div className="columns-1 md:columns-2  xl:columns-3 overflow-hidden">
           {content.map((data, i) => {
@@ -54,9 +54,34 @@ const Projects = () => {
           target="_blank"
           rel="noreferrer"
           data-aos="fade-up"
-          className="z-10 mt-10 text-xl font-bold font-blinker text-ccyan"
+          className="z-10 mt-10 text-md font-bold font-blinker text-ccyan"
         >
           See more projects on GitHub {">"}
+        </a>
+        <h1
+          data-aos="fade-up"
+          className="z-10 mb-5 mt-20 text-4xl font-bold font-blinker text-ccyan"
+        >
+          Music Prod Projects
+        </h1>
+        <iframe
+          className="z-10"
+          width="95%"
+          height="400"
+          scrolling="no"
+          frameborder="no"
+          data-aos="fade-up"
+          allow="autoplay"
+          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1546494838&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+        ></iframe>
+        <a
+          href="https://soundcloud.com/elvxk"
+          target="_blank"
+          rel="noreferrer"
+          data-aos="fade-up"
+          className="z-10 mt-10 text-md font-bold font-blinker text-ccyan"
+        >
+          See more projects on Soundcloud {">"}
         </a>
       </div>
     </section>
