@@ -5,10 +5,15 @@ import {
   SiTailwindcss,
   SiNextdotjs,
   SiPostgresql,
+  SiBootstrap,
+  SiHtml5,
 } from "react-icons/si";
 import dinotro from "../assets/project/dinotrostore.webp";
 import portfoliov2 from "../assets/project/portfoliov2.webp";
 import muminime from "../assets/project/muminime.webp";
+import pesenstudiomlg from "../assets/project/pesenstudiomlg.webp";
+import lytgadget from "../assets/project/lytgadget.webp";
+import strikersix from "../assets/project/stxrp.webp";
 
 const project = [
   {
@@ -23,6 +28,19 @@ const project = [
     img: muminime,
     demotext: "Demo",
     demo: "https://my-muminime.vercel.app/",
+  },
+  {
+    title: "LYT Gadget",
+    desc: "website for LYT Gadget to check ready stock with internal API for connect database",
+    stack: [
+      <SiNextdotjs name="NextJs" />,
+      <SiPostgresql name="Postgresql" />,
+      <SiReact name="React" />,
+      <SiTailwindcss name="Tailwind" />,
+    ],
+    img: lytgadget,
+    demotext: "Demo",
+    demo: "https://lytgadget.vercel.app/",
   },
   {
     title: "Dinotro Store",
@@ -43,6 +61,22 @@ const project = [
     img: portfoliov2,
     demotext: "Demo",
     demo: "https://elvxk-portfoliov2.vercel.app/",
+  },
+  {
+    title: "Striker Six Roleplay",
+    desc: "Landing page for Striker Six Roleplay. Striker Six Roleplay is a multiplayer roleplaying game that allows you to play as a player or as a spectator in a multiplayer roleplaying game.",
+    stack: [<SiHtml5 name="HTML" />, <SiBootstrap name="Bootstrap" />],
+    img: strikersix,
+    demotext: "Demo",
+    demo: "https://strikersix.vercel.app/",
+  },
+  {
+    title: "Pesen Studio MLG",
+    desc: "Website platform for booking Music Studio in Malang.",
+    stack: [<SiBootstrap name="Bootstrap" />, <SiLaravel name="Laravel" />],
+    img: pesenstudiomlg,
+    demotext: "Demo",
+    demo: "https://pesenstudio.sandri.my.id/",
   },
 ];
 
