@@ -1,15 +1,8 @@
 /* eslint-disable react/prop-types */
-import { useEffect, useState } from "react";
 import ProjectCard from "../components/ProjectCard";
 
-const Projects = () => {
-  const [projects, setProjects] = useState(null);
-
-  useEffect(() => {
-    fetch("https://api.sandri.my.id/projects", { method: "POST" })
-      .then((res) => res.json())
-      .then(({ data }) => setProjects(data));
-  }, []);
+const Projects = ({ data }) => {
+  const projects = data;
 
   return (
     <section

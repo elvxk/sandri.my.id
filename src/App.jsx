@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import SideNav from "./components/SideNav";
 import Navbar from "./components/Navbar";
@@ -12,9 +12,18 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 function App() {
+  const [projects, setProjects] = useState(null);
+
   useEffect(() => {
     AOS.init();
+    fetch("https://api.sandri.my.id/projects", { method: "POST" })
+      .then((res) => res.json())
+      .then(({ data }) => {
+        setProjects(data);
+      });
   }, []);
+
+  // eslint-disable-next-line no-unused-vars
   window.addEventListener("hashchange", (e) => {
     history.replaceState({}, "", location.href.replace(location.hash, ""));
   });
@@ -24,7 +33,7 @@ function App() {
       <Navbar />
       <Home />
       <About />
-      <Projects />
+      <Projects data={projects} />
       <Contact />
       <Footer />
     </>

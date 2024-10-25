@@ -10,8 +10,6 @@ const ProjectCard = ({ title, desc, img, stack, demo }) => {
     icon: iconMap[stack] || <span>?</span>, // Tampilkan '?' jika icon tidak ditemukan
   }));
 
-  console.log(stackIcons);
-
   return (
     <div className="relative hover:scale-95 transition-all w-full border-4 border-cdark dark:border-cwhite flex flex-col shadow-lg overflow-hidden">
       <div className="bg-cbrown dark:bg-cdark w-full h-full absolute -z-20"></div>
