@@ -70,11 +70,9 @@ const Projects = ({ data }) => {
           className="z-[7]"
           width="95%"
           height="400"
-          scrolling="no"
-          frameBorder="no"
           data-aos="fade-up"
           allow="autoplay"
-          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1546494838&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1546494838&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"
         ></iframe>
         <a
           href="https://soundcloud.com/elvxk"
