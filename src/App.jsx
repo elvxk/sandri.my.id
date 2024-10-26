@@ -16,7 +16,7 @@ function App() {
 
   useEffect(() => {
     AOS.init();
-    fetch("https://api.sandri.my.id/projects", { method: "POST" })
+    fetch("https://api.sandri.my.id/projects", { method: "GET" })
       .then((res) => res.json())
       .then(({ data }) => {
         setProjects(data);
