@@ -34,10 +34,14 @@ import {
   SiPhp,
   SiLaravel,
   SiDotnet,
+  SiPrisma,
 } from "react-icons/si";
 import { FaNodeJs, FaAws, FaGitlab } from "react-icons/fa";
+import { TbApi } from "react-icons/tb";
 
 const iconMap = {
+  prisma: <SiPrisma />,
+  api: <TbApi />,
   react: <SiReact />,
   nextjs: <SiNextdotjs />,
   tailwind: <SiTailwindcss />,

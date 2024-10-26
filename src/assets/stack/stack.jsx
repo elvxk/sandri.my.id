@@ -6,8 +6,6 @@ import py from "./py.webp";
 import php from "./php.webp";
 import vite from "./vite.webp";
 import git from "./git.webp";
-import css from "./css.webp";
-import html from "./html.webp";
 import laravel from "./laravel.webp";
 import ci from "./ci.webp";
 import mysql from "./mysql.webp";
@@ -16,25 +14,31 @@ import pr from "./pr.webp";
 import fl from "./fl.webp";
 import cb from "./cb.webp";
 import figma from "./figma.webp";
+import nextjs from "./nextjs.webp";
+import pgsql from "./pgsql.webp";
+import nvim from "./nvim.webp";
+import prisma from "./prisma.webp";
 
 const stack = [
-  vite,
-  git,
+  js,
   react,
+  php,
+  py,
   tailwind,
   bs,
-  php,
-  js,
-  py,
-  html,
-  css,
+  vite,
+  nextjs,
   laravel,
   ci,
+  pgsql,
   mysql,
-  ps,
-  pr,
-  fl,
-  cb,
+  prisma,
+  git,
+  nvim,
   figma,
+  ps,
+  // pr,
+  fl,
+  // cb,
 ];
 export default stack;

@@ -16,7 +16,8 @@ function App() {
 
   useEffect(() => {
     AOS.init();
-    fetch("https://api.sandri.my.id/projects", { method: "GET" })
+    // fetch("http://localhost:3000/projects?limit=6", { method: "GET" })
+    fetch("https://api.sandri.my.id/projects?limit=6", { method: "GET" })
       .then((res) => res.json())
       .then(({ data }) => {
         setProjects(data);
