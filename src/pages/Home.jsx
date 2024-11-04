@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Parallax from "parallax-js";
 import { useEffect, useRef } from "react";
 import hero from "../assets/parallax/hero.webp";
