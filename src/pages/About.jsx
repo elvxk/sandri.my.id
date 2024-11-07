@@ -4,7 +4,7 @@ import { Typewriter } from "react-simple-typewriter";
 import { IoLocationOutline } from "react-icons/io5";
 import profile from "../assets/profile.webp";
 import stack from "../assets/stack/stack";
-import cv from "../assets/cv.pdf";
+import cv from "../assets/cvnew.pdf";
 import { IoDocumentTextOutline } from "react-icons/io5";
 import { FaLinkedin } from "react-icons/fa";
 import { FaLaptopCode } from "react-icons/fa6";
