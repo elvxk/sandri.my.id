@@ -43,9 +43,9 @@ const About = () => {
             and my nickname is{" "}
             <span className="text-cpink font-bold">elvxk</span> on several
             social media. I am a fresh graduate with a{" "}
-            <span className="text-cpink font-bold">bachelor's degree</span> in
-            informatics engineering, able to work individually or collaborate in
-            a team. I have several skills that can be relied on in this era,
+            <span className="text-cpink font-bold">bachelor{"'"}s degree</span>{" "}
+            in informatics engineering, able to work individually or collaborate
+            in a team. I have several skills that can be relied on in this era,
             such as web development,{" "}
             <span className="text-cpink font-bold">frontend development</span>,
             music production and others. I am interested in the IT industry with
@@ -55,6 +55,7 @@ const About = () => {
           </p>
           <a
             data-aos="fade-left"
+            rel="noreferrer"
             href="https://maps.app.goo.gl/kH4QZmN6W9Kry2Ly5"
             target="_blank"
             className="group relative items-center gap-1 font-blinker text-cwhite px-2 flex max-w-fit transition-all"
@@ -117,6 +118,7 @@ const About = () => {
                   <span className="bg-ccyan dark:bg-cpink h-full w-0 group-hover:w-full start-0 absolute transition-all -z-10"></span>
                 </a>
                 <a
+                  rel="noreferrer"
                   href="https://www.linkedin.com/in/elvxk/"
                   target="_blank"
                   className="font-blinker text-cpink dark:text-ccyan text-lg flex gap-1 items-center justify-center lg:order-first hover:text-ccyan transition-all dark:hover:text-cpink"
@@ -192,8 +194,8 @@ const About = () => {
   );
 };
 
-const Services = (props) => {
-  const { icon, title, desc } = props;
+const Services = (data) => {
+  const { icon, title, desc } = data;
   return (
     <div
       data-aos="zoom-in"
