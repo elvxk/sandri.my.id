@@ -52,13 +52,13 @@ const Projects = ({ data }) => {
             })}
         </div>
         <a
-          href="https://github.com/elvxk"
+          href="https://projects.sandri.my.id"
           target="_blank"
           rel="noreferrer"
           data-aos="fade-up"
           className="z-[7] mt-10 text-md font-bold font-blinker text-ccyan"
         >
-          See more projects on GitHub {">"}
+          See more projects {">"}
         </a>
         <h1
           data-aos="fade-up"
@@ -81,7 +81,16 @@ const Projects = ({ data }) => {
           data-aos="fade-up"
           className="z-[7] mt-10 text-md font-bold font-blinker text-ccyan"
         >
-          See more projects on Soundcloud {">"}
+          See more on Soundcloud {">"}
+        </a>
+        <a
+          href="https://youtube.com/@elvxk"
+          target="_blank"
+          rel="noreferrer"
+          data-aos="fade-up"
+          className="z-[7]  text-md font-bold font-blinker text-ccyan"
+        >
+          See more on Youtube {">"}
         </a>
       </div>
     </section>
