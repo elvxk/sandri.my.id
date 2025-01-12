@@ -2,10 +2,10 @@ import { useState } from "react";
 import { RandomReveal } from "react-random-reveal";
 import { Typewriter } from "react-simple-typewriter";
 import { IoLocationOutline } from "react-icons/io5";
-import profile from "../assets/profile.webp";
+import profile from "../assets/pradipta.webp";
 import stack from "../assets/stack/stack";
-import cv from "../assets/cvnew.pdf";
-import { IoDocumentTextOutline } from "react-icons/io5";
+// import cv from "../assets/cvnew.pdf";
+// import { IoDocumentTextOutline } from "react-icons/io5";
 import { FaLinkedin } from "react-icons/fa";
 import { FaLaptopCode } from "react-icons/fa6";
 import { LuLayoutDashboard } from "react-icons/lu";
@@ -42,7 +42,7 @@ const About = () => {
             <span className="text-cpink font-bold">Pradipta R. Sandri</span>,
             and my nickname is{" "}
             <span className="text-cpink font-bold">elvxk</span> on several
-            social media. I am a fresh graduate with a{" "}
+            social media. I am a{" "}
             <span className="text-cpink font-bold">bachelor{"'"}s degree</span>{" "}
             in informatics engineering, able to work individually or collaborate
             in a team. I have several skills that can be relied on in this era,
@@ -51,7 +51,15 @@ const About = () => {
             music production and others. I am interested in the IT industry with
             my focus on{" "}
             <span className="text-cpink font-bold">web development</span> and
-            frontend development.
+            frontend development. Currently I work as customer support at{" "}
+            <a
+              rel="noreferrer"
+              href="https://jagoanhosting.com"
+              className="text-cpink font-bold"
+              target="_blank"
+            >
+              Jagoan Hosting Indonesia
+            </a>
           </p>
           <a
             data-aos="fade-left"
@@ -106,17 +114,17 @@ const About = () => {
                 data-aos="fade-right"
                 className="flex flex-col gap-2 justify-center items-center lg:flex-row lg:gap-4 mt-2"
               >
-                <a
-                  href={cv}
-                  className="border-2 group relative items-center gap-1 font-blinker text-cwhite px-4 py-2 flex max-w-fit transition-all"
-                >
-                  <span className="group-hover:-translate-x-1 transition-all">
-                    Download CV
-                  </span>
-                  <IoDocumentTextOutline className="group-hover:-rotate-12" />
-                  <span className="bg-cpink dark:bg-ccyan h-full w-full start-0 absolute transition-all -z-20"></span>
-                  <span className="bg-ccyan dark:bg-cpink h-full w-0 group-hover:w-full start-0 absolute transition-all -z-10"></span>
-                </a>
+                {/* <a */}
+                {/*   href={cv} */}
+                {/*   className="border-2 group relative items-center gap-1 font-blinker text-cwhite px-4 py-2 flex max-w-fit transition-all" */}
+                {/* > */}
+                {/*   <span className="group-hover:-translate-x-1 transition-all"> */}
+                {/*     Download CV */}
+                {/*   </span> */}
+                {/*   <IoDocumentTextOutline className="group-hover:-rotate-12" /> */}
+                {/*   <span className="bg-cpink dark:bg-ccyan h-full w-full start-0 absolute transition-all -z-20"></span> */}
+                {/*   <span className="bg-ccyan dark:bg-cpink h-full w-0 group-hover:w-full start-0 absolute transition-all -z-10"></span> */}
+                {/* </a> */}
                 <a
                   rel="noreferrer"
                   href="https://www.linkedin.com/in/elvxk/"

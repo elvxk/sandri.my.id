@@ -47,7 +47,7 @@ const Contact = () => {
             <FaFacebook />
           </a>
           <a
-            href="https://twitter.com/r_sandriii"
+            href="https://twitter.com/xelvxkx"
             target="_blank"
             className="hover:text-cpink transition-all dark:hover:text-ccyan"
             rel="noreferrer"
