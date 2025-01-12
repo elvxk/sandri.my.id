@@ -4,8 +4,8 @@ import { Typewriter } from "react-simple-typewriter";
 import { IoLocationOutline } from "react-icons/io5";
 import profile from "../assets/pradipta.webp";
 import stack from "../assets/stack/stack";
-// import cv from "../assets/cvnew.pdf";
-// import { IoDocumentTextOutline } from "react-icons/io5";
+import cv from "../assets/cvnew.pdf";
+import { IoDocumentTextOutline } from "react-icons/io5";
 import { FaLinkedin } from "react-icons/fa";
 import { FaLaptopCode } from "react-icons/fa6";
 import { LuLayoutDashboard } from "react-icons/lu";
@@ -70,7 +70,7 @@ const About = () => {
           >
             <IoLocationOutline className="group-hover:-rotate-12" />{" "}
             <span className="group-hover:-translate-x-1 transition-all">
-              Tulungagung, Indonesia
+              Malang, Indonesia
             </span>
             <span className="bg-cpink h-full w-full start-0 absolute transition-all -z-20"></span>
             <span className="bg-ccyan h-full w-0 group-hover:w-full start-0 absolute transition-all -z-10"></span>
@@ -114,17 +114,17 @@ const About = () => {
                 data-aos="fade-right"
                 className="flex flex-col gap-2 justify-center items-center lg:flex-row lg:gap-4 mt-2"
               >
-                {/* <a */}
-                {/*   href={cv} */}
-                {/*   className="border-2 group relative items-center gap-1 font-blinker text-cwhite px-4 py-2 flex max-w-fit transition-all" */}
-                {/* > */}
-                {/*   <span className="group-hover:-translate-x-1 transition-all"> */}
-                {/*     Download CV */}
-                {/*   </span> */}
-                {/*   <IoDocumentTextOutline className="group-hover:-rotate-12" /> */}
-                {/*   <span className="bg-cpink dark:bg-ccyan h-full w-full start-0 absolute transition-all -z-20"></span> */}
-                {/*   <span className="bg-ccyan dark:bg-cpink h-full w-0 group-hover:w-full start-0 absolute transition-all -z-10"></span> */}
-                {/* </a> */}
+                <a
+                  href={cv}
+                  className="border-2 group relative items-center gap-1 font-blinker text-cwhite px-4 py-2 flex max-w-fit transition-all"
+                >
+                  <span className="group-hover:-translate-x-1 transition-all">
+                    Download CV
+                  </span>
+                  <IoDocumentTextOutline className="group-hover:-rotate-12" />
+                  <span className="bg-cpink dark:bg-ccyan h-full w-full start-0 absolute transition-all -z-20"></span>
+                  <span className="bg-ccyan dark:bg-cpink h-full w-0 group-hover:w-full start-0 absolute transition-all -z-10"></span>
+                </a>
                 <a
                   rel="noreferrer"
                   href="https://www.linkedin.com/in/elvxk/"
