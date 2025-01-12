@@ -64,7 +64,8 @@ const About = () => {
           <a
             data-aos="fade-left"
             rel="noreferrer"
-            href="https://maps.app.goo.gl/kH4QZmN6W9Kry2Ly5"
+            href="https://maps.app.goo.gl/ShjT8ninz8fzTYUk7"
+            // href="https://maps.app.goo.gl/kH4QZmN6W9Kry2Ly5"
             target="_blank"
             className="group relative items-center gap-1 font-blinker text-cwhite px-2 flex max-w-fit transition-all"
           >
